@@ -3,20 +3,20 @@ import org.gradle.jvm.tasks.Jar
 plugins {
     `build-scan`
     `maven-publish`
-    kotlin("jvm") version "1.3.21" 
+    kotlin("jvm") version "1.3.21"
     id("org.jetbrains.dokka") version "0.9.17"
     signing
 }
 
-group = "com.davidlj95"
+group = "com.ccebrecos"
 version = "0.0.1"
 
 repositories {
-    jcenter() 
+    jcenter()
 }
 
 dependencies {
-    implementation(kotlin("stdlib")) 
+    implementation(kotlin("stdlib"))
     testImplementation("junit:junit:4.12")
 }
 
@@ -54,7 +54,7 @@ publishing {
             pom {
                 name.set("Kotlin JVM sample library")
                 description.set("A sample JVM library to test maven")
-                url.set("https://github.com/davidlj95/my-kotlin-library")
+                url.set("https://github.com/ccebrecos/my-kotlin-library")
                 licenses {
                     license {
                         name.set("The GNU General Public License v3.0")
@@ -63,16 +63,16 @@ publishing {
                 }
                 developers {
                     developer {
-                        id.set("davidlj95")
-                        name.set("David LJ")
-                        email.set("mail@davidlj95.com")
+                        id.set("ccebrecos")
+                        name.set("Carlos GC")
+                        email.set("mail@ccebrecos.com")
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/davidlj95/my-kotlin-library.git")
-                    developerConnection.set("scm:git:ssh://github.com/davidlj95/my-kotlin-library.git")
-                    url.set("https://github.com/davidlj95/my-kotlin-library")
-                }      
+                    connection.set("scm:git:git://github.com/ccebrecos/my-kotlin-library.git")
+                    developerConnection.set("scm:git:ssh://github.com/ccebrecos/my-kotlin-library.git")
+                    url.set("https://github.com/ccebrecos/my-kotlin-library")
+                }
             }
         }
     }
